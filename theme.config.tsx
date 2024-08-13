@@ -1,6 +1,6 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
-import Footer from "./app/Footer";
+import Footer from "./components/Footer";
 
 const config: DocsThemeConfig = {
   logo: <span>My Project</span>,
