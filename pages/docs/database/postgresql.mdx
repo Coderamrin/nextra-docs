@@ -1,0 +1,68 @@
+---
+title: PostgreSQL - Docs
+description: Step by step guide on how to integrate Vercel PostgreSQL on Nextjs Boilerplates.
+---
+
+import { Callout } from 'nextra/components'
+
+
+# PostgreSQL
+
+Our boilerplate templates comes with PostgreSQL integration.
+In this part of the documentation, we are going to show you how to integrate Vercel Postgres with your boilerplate template. 
+
+<Callout type="info">
+**Note:** If you want to use other [providers](/docs/database#other-providers) you can do so. For demonstration purpose we are using [Vercel PostgreSQL](https://vercel.com/docs/storage/vercel-postgres)
+</Callout>
+
+### Getting the Database URL
+
+Before we integrate the database in the template first you have to [deploy](https://nextjs.org/learn/basics/deploying-nextjs-app/deploy) it to Vercel. 
+
+Once you deploy it follow the instruction to create the database. 
+
+1. Go to the **Storage** tab. 
+
+![database](https://nextjstemplates.com/docs/vercel-db1.png)
+
+2. Now Scroll down and click on the **Create New Database** button. 
+
+![database](https://nextjstemplates.com/docs/vercel-db2.png)
+
+After that select **Postgres** and then the **Continue** button.
+
+![database](https://nextjstemplates.com/docs/vercel-db3.png)
+
+Now do the following to create a new database: 
+
+3. Enter the database name. The name can only contain alphanumeric letters, "_" and "-" and can't exceed 32 characters.
+4. Select a region. 
+5. Click **Create.** 
+
+The Database is created successfully.
+
+Because we created the database in a project, we won’t have to add the environment variables manually to Vercel. It’ll be added automatically. 
+
+Now we have to pull the environment variables to the local project. 
+
+To do that, first of all, you have to install **Vercel CLI**
+
+```bash
+npm i -g vercel@latest
+```
+
+After that run this command to pull the .env variables. 
+
+```bash
+vercel env pull .env
+```
+
+<Callout type="info">
+**Note**: You have to connect the local project with Vercel for this command to work. Follow this [instruction](https://vercel.com/guides/nextjs-prisma-postgres) to link the project.
+</Callout>
+
+
+
+## Migrate the Schema
+
+[Migrate the Schema](/docs/database/migrate-the-schema)

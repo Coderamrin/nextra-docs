@@ -1,0 +1,38 @@
+---
+title: Resend Integration - Docs
+description: Steps by steps guide on how to get SMTP credentials from Resend
+serial: 11
+--- 
+
+import { Callout } from "nextra/components";
+
+# Resend Integration
+
+In this part of the documentation, we will show you how to integrate SMTP to be able to send transactional mail from your website. 
+
+Follow the steps below to integrate SMTP in your boilerplate template:
+
+<Callout type="info">
+Note: We will be using **Resend** as our SMTP provider. You can use any SMTP provider you want. 
+</Callout>
+
+1. Login to **[Resend](https://resend.com/)** if you don’t have an account already go ahead and create one. 
+2. **Generate API Key:** Go to **API Keys** and click on the **Create API Key** button
+
+![resend integration](https://nextjstemplates.com/docs/resend-01.png)
+
+3. Get the SMTP **PORT** and **HOST:** Go to **Settings** then go to **SMTP** you can see all of them here. 
+
+![resend integration](https://nextjstemplates.com/docs/resend-02.png)
+
+Go ahead and copy these and then update the env file
+
+```shellscript copy
+EMAIL_SERVER_HOST=YOUR_SMTP_HOST
+EMAIL_SERVER_PORT=YOUR_SMTP_PORT
+EMAIL_SERVER_USER=YOUR_SMTP_USER
+EMAIL_SERVER_PASSWORD=YOUR_SMTP_PASSWORD(for resend it's the API KEY)
+EMAIL_FROM=YOUR_EMAIL_TO_SEND_FROM
+```
+
+One last thing you have to do is verify your [Domain](https://resend.com/domains). 

@@ -1,0 +1,29 @@
+---
+title: NextAuth Setup - Docs
+description: NextAuth integration for managing all authentication.
+---
+
+# NextAuth Setup
+
+For authentication, we are using NextAuth. 
+
+Before integrating Github and Google authentication you have to set up NextAuth. 
+
+To set up NextAuth, first, create a **.env** file in the root of your project.  
+
+Then add NextAuth_SECRET and NextAuth_CLIENT to the **.env** file. 
+
+```bash
+NEXTAUTH_SECRET=SECRET_KEY
+NEXTAUTH_URL=http://localhost:3000
+```
+
+NEXTAUTH_SECRET is just a random string. You can generate a random string using this command
+
+```bash
+openssl rand -base64 32
+```
+
+or you can go to [this](https://generate-secret.vercel.app/32) URL it’ll give you a unique string too. 
+
+The NEXTAUTH_URL for development is http://localhost:3000 and for deployment it’s the canonical URL of your site.

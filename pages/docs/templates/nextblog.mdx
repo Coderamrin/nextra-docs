@@ -1,0 +1,140 @@
+---
+title: Installing and Configuring NextBlog Template - Docs
+description: Step by step guide to install and configure next.js NextBlog Template
+serial: 3
+---
+
+# Installing and Configuring NextBlog Template
+
+In this part of the documentation we are going to show you how to Install and Configure Nextjs Blog templates.
+
+Follow the steps to successfully install and configure NextBlog Template
+
+## Steps
+
+The Blog Templates installation process is a bit different from the other templates. Follow these steps one by one to run the project without getting into unwanted error massages.
+
+1. [Installation](/docs/installation)
+2. [Database Setup - PostgreSQL](/docs/database)
+3. [Authentication](/docs/authentication)
+4. [Sanity Integration](/docs/sanity)
+5. [Markdown Integration](/docs/markdown)
+6. [Stripe Integration](/docs/stripe)
+7. [Stripe Webhook Integration](#stripe-webhook)
+8. [Algolia Integration](/docs/algolia)
+9. [MailChimp Integration](/docs/mailchimp)
+10. [Resend Integration](/docs/resend)
+
+Follow the Sanity Integration guide to setup the project.
+After that take the Sanity ProjectID and title, and save them in the .env file under these variable names:
+
+```bash copy
+NEXT_PUBLIC_SANITY_PROJECT_ID=YOUR_PROJECT_ID
+NEXT_PUBLIC_SANITY_PROJECT_TITLE=YOUR_PROJECT_TITLE
+```
+
+### Webhook integration for local development [#stripe-webhook]
+
+We got the subscription setup. One last thing we have to do now is integrate the Stripe webhook.
+
+Follow the below instructions to integrate the stripe webhook for local development.
+
+1. Go to the Webhooks tab under the Developers page
+
+![stripe](https://nextjstemplates.com/docs/stripe14.png)
+
+2. Now click on the Add endpoint button.
+
+![stripe](https://nextjstemplates.com/docs/stripe15.png)
+
+3. Select Test in a local environment
+
+![stripe](https://nextjstemplates.com/docs/stripe16.png)
+
+4. Install [Stripe CLI](https://stripe.com/docs/stripe-cli) and login to stripe
+
+```bash copy
+stripe login
+```
+
+5. Run this command to forward the event to the webhook. I’ve added this script to package.json file
+
+```bash copy
+npm run stripe:listen
+```
+
+6. Add the webhook secret to the env file.
+
+![stripe](https://nextjstemplates.com/docs/stripe17.png)
+
+Copy it from the terminal and add it to this variable.
+
+```bash copy
+STRIPE_WEBHOOK_SECRET=YOUR_WEBHOOK_SECRET
+```
+
+Now go ahead and test the subscription, it should work in your local environment.
+
+### Webhook integration for the live site
+
+In the last part, we saw how to integrate Webhook for testing locally.
+Now we are going to see how to integrate Stripe Webhook for a live site.
+
+Follow these instructions to enable the webhook for your live site:
+
+1. Go to the **Webhooks** tab under the **Developers** tab.
+
+![stripe](https://nextjstemplates.com/docs/stripe18.png)
+
+2. Now add your site URL here:
+   ![stripe](https://nextjstemplates.com/docs/stripe19.png)
+
+**Note**: your live site URL is not just the root URL. It must follow this pattern: **yoursite.com/api/webhooks/stripe**
+
+3. Select the Latest API version from this drop-down menu.
+
+![stripe](https://nextjstemplates.com/docs/stripe20.png)
+
+4. Now click on the Select Events button.
+
+![stripe](https://nextjstemplates.com/docs/stripe21.png)
+
+Once you click on the button, you’ll see something like this. Now check the Select all events box. Click the Add Events button.
+
+![stripe](https://nextjstemplates.com/docs/stripe22.png)
+
+5. Now click on the Add endpoint button.
+
+![stripe](https://nextjstemplates.com/docs/stripe23.png)
+
+We are almost done. One last thing we have to do is get the Webhook secret for the live site and add that to the .env file.
+
+After you’ve added the endpoint you’ll see something like this. Click on the URL.
+
+![stripe](https://nextjstemplates.com/docs/stripe24.png)
+
+Click **Reveal**, you’ll see the secret key there. Copy the key and add that to your live site's .env file.
+
+![stripe](https://nextjstemplates.com/docs/stripe25.png)
+
+---
+
+When all these are done, Then you can start the project on the local server
+
+```bash copy
+npm run dev
+```
+
+It’ll start the template on [localhost:3000](http://localhost:3000).
+
+The documentation includes all the guides you need for the integrations.
+
+### Deploying on PaaS
+
+If you are using a GitHub repo then you can go with free-of-cost and easy-to-use options like [Vercel](https://vercel.com/), or [Netlify](https://netlify.com/) they offer decent-free tiers for Next.js hosting.
+
+#### If you are using Prisma ORM (Comes with All Starter Templates)
+
+Make sure to edit build command like this while you use Prisma as ORM while deploying to Vercel.
+
+![prisma-vercel](https://nextjstemplates.com/docs/prisma-vercel.png)

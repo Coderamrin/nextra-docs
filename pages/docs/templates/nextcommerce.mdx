@@ -1,0 +1,100 @@
+---
+title: Installing and Configuring NextCommerce Template - Docs
+description: Step by step guide to install and configure next.js NextCommerce Template
+serial: 4
+---
+
+import {Callout} from "nextra/components";
+
+# Installing and Configuring NextCommerce Template
+
+In this part of the documentation we are going to show you how to Install and Configure Nextjs E-commerce templates.
+
+Follow the steps to successfully install and configure NextCommerce Template
+
+## Steps
+
+The E-commerce templates installation process is a bit different from the starter templates.
+We’ve used Sanity API, Webhook and other technologies that are not included on the starter templates.
+
+Follow the steps below to configure the NextCommerce template.
+
+1. [Installation](/docs/installation)
+2. [Database Integration - PostgreSQL on Vercel ](/docs/database/postgresql)
+
+
+<Callout type="info">
+**Note:** you can use any PostgreSQL you want. Just save the database url in the env using this name:
+</Callout>
+
+
+```
+DATABASE_URL=YOUR_DB_CONNECT_URL
+```
+
+3. [Authentication](/docs/authentication)
+4. [Sanity Integration](/docs/sanity)
+
+Follow the Sanity Integration guide to setup the project. After that take the Sanity ProjectID and title, and save them in the .env file under these variable names:
+
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=YOUR_PROJECT_ID
+NEXT_PUBLIC_SANITY_PROJECT_TITLE=YOUR_PROJECT_TITLE
+```
+
+5.[Sanity API integration](/docs/sanity/api-integration)
+
+6.[Sanity Webhook integration](/docs/sanity/webhook-integration)
+
+7.[Stripe Integration](/docs/stripe)
+
+8.[Algolia Integration](/docs/algolia)
+
+9. **Admin privilege:**
+   For admin privilage add the admin emails on the env file under this variable:
+
+``` copy
+ADMIN_EMAILS=demoadmin@gmail.com
+```
+
+This will set the user role to Admin.
+
+## How to create products
+
+In this part of the documentation, we are going to show you how to create and publish a product from your admin dashboard.
+
+Follow the steps below to create and publish a product:
+
+1. Go to Admin. It’s under **/admin** route of your website. Follow the steps to log in to sanity and make sure to add your URL to the CORS origins list.
+   Once you’ve completed the login you’ll be redirected to your sanity admin. That’ll look something like this:
+
+![next commerce](/docs/next-commerce-1.png)
+
+I already added some demo products here, you’ll see the dashboard empty.
+
+Now let’s go add a product to your store.
+
+2. Create a category: go to the category tab, and click on the pen icon to create a new category.
+
+Fill out all the required fields then hit the publish button.
+
+![next commerce](/docs/next-commerce-2.png)
+
+3. Create a product: go to the product tab and click on the pen icon. It’ll open up a form to create a new product like this:
+
+![next commerce](/docs/next-commerce-3.png)
+
+Fill out the form with all the necessary product data and hit the publish button.
+Your product will be live, now it’ll be visible on the storefront.
+
+### Video Tutorial
+
+<iframe
+	width="560"
+	height="315"
+	src="https://www.youtube.com/embed/zcjXJE7JECA?si=wFFQwuHtqtnH6aNN"
+	title="YouTube video player"
+	frameborder="0"
+	allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+	allowfullscreen
+></iframe>

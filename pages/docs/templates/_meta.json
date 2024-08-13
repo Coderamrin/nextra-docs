@@ -1,0 +1,20 @@
+{
+  "startup": {
+    "title": "Startup"
+  },
+  "solid": {
+    "title": "Solid"
+  },
+  "play": {
+    "title": "Play"
+  },
+  "ai-tool": {
+    "title": "Ai Tool"
+  }, 
+  "nextblog": {
+    "title": "NextBlog"
+  },
+  "nextcommerce": {
+    "title": "NextCommerce"
+  }
+}

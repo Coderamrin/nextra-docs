@@ -1,0 +1,11 @@
+{
+  "nextAuth-setup": {
+    "title": "NextAuth Setup"
+  },
+  "google-login": {
+    "title": "Google Login"
+  },
+  "github-login": {
+    "title": "Github Login"
+  }
+}

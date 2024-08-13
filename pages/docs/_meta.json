@@ -1,0 +1,47 @@
+{
+  "index": {
+    "title": "Introduction"
+  },
+  "installation": {
+    "title": "Installation"
+  }, 
+  "customization": {
+    "title": "Customization"
+  },
+  "boilerplate": {
+    "title": "Boilerplate"
+  },
+  "database": {
+    "title": "Database"
+  },
+  "authentication": {
+    "title": "Authentication"
+  },
+  "sanity": {
+    "title": "Sanity"
+  },
+  "markdown": {
+    "title": "Markdown"
+  },
+  "stripe": {
+    "title": "Stripe"
+  },
+  "algolia": {
+    "title": "Algolia"
+  },
+  "mailchimp": {
+    "title": "Mailchimp"
+  },
+  "resend": {
+    "title": "Resend"
+  },
+  "templates": {
+    "title": "Templates"
+  },
+  "resources": {
+    "title": "Resources"
+  },
+  "download": {
+    "title": "Downloads"
+  }
+}

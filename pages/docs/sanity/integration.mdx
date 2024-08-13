@@ -1,0 +1,66 @@
+---
+title: Integrate Sanity with Next.js Boilerplate - Docs
+description: Sanity integration for managing blogs.
+---
+
+# Integration
+
+All Pro Templates and Boilerplates with [Sanity.io](http://sanity.io) integration for managing a Blog.
+
+In this part of the documentation, we are going to show you how you can integrate Sanity into the Startup Pro Template and start your blog.
+
+Follow the steps below to integrate Sanity into your Startup Pro Template.
+
+1. Go to [Sanity.io](http://sanity.io) and click on the **Start Building** button to create the project.
+
+![sanoty-integration](https://nextjstemplates.com/docs/sanity1.png)
+
+2. After you’ve clicked on that button you’ll be asked to log in if you haven’t logged in yet.
+
+![sanoty-integration](https://nextjstemplates.com/docs/sanity2.png)
+
+3. Once you’ve logged in you’ll be asked a few questions, as shown below. Go ahead and answer them as we did here.
+
+![sanoty-integration](https://nextjstemplates.com/docs/sanity3.png)
+
+**Note:** After the project is created successfully you’ll get a Sanity Studio installation command, we don’t need that here. Just close that window and follow the rest of the steps to complete the integration.
+
+![sanoty-integration](https://nextjstemplates.com/docs/sanity4.png)
+
+4. Get the key from the project: To get the key login to [Sanity.io/manage](https://www.sanity.io/manage) and then go to the project you want to connect. When you go to the project, you’ll see **Project ID** under the Project name as shown below. Go ahead and copy it.
+
+![sanoty-integration](https://nextjstemplates.com/docs/sanity5.png)
+
+5. Now add this Project ID to the .env file, to the following variable:
+
+```bash
+SANITY_PROJECT_ID=YOUR_PROJECT_ID
+```
+
+6. Now, add the following data to the **Sanity.config.ts** file. We need the **TItle**, **ProjectID,** and **Dataset** of the project.
+
+You can find the **Sanity.config.ts** file on the root of the template.
+
+![sanoty-integration](https://nextjstemplates.com/docs/sanity6.png)
+
+7. Go to http://localhost:3000/admin to add the URL. You’ll be redirected to a page that looks like this. Go ahead and click on **Continue** It’ll take you to your Sanity Projects Dashboard.
+
+![sanoty-integration](https://nextjstemplates.com/docs/sanity7.png)
+
+Add the URL as a CORS origin.
+
+![sanoty-integration](https://nextjstemplates.com/docs/sanity8.png)
+
+8. Log in to the studio to start writing. To login go to http://localhost:3000/admin. You’ll be redirected to a login page where you’ll see all the providers you can use to log in.
+
+Choose the provider you want to log in with. We are going to log in with GitHub
+
+![sanoty-integration](https://nextjstemplates.com/docs/sanity9.png)
+
+9. After you’ve logged in you’ll be redirected to Sanity Studio Dashboard. From the dashboard, you can post Articles and add Authors.
+
+![sanoty-integration](https://nextjstemplates.com/docs/sanity10.png)
+
+The integration is done!
+
+Let’s go ahead and see how you can add an Article and an Author to your blog.

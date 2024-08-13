@@ -1,0 +1,48 @@
+---
+title: Migrate the Schema - Docs
+description: Instructions on how to migrate Schema to the Database
+---
+
+import { Callout } from 'nextra/components'
+
+# Migrate the Schema
+
+After generating the Database URL you have to migrate the schema to the Database.
+
+Follow the instructions below to complete the migration.
+
+
+Run this command to push the schema to your database.
+
+```bash
+npx prisma db push
+```
+
+After you run this you’ll be able to see the **Tables** your Database dashboard
+
+Now run this command
+
+```bash
+npx prisma generate
+```
+
+Now go ahead and signup using the Form. If everything was done properly you’ll see the user on the Database. 
+
+<Callout>
+**Notes:** Make sure you run Prisma generate command before the final build
+</Callout>
+
+
+```bash
+prisma generate
+```
+
+then
+
+```bash
+npm run build
+```
+
+Also, while deploying your app on Vercel, edit build command and make it like the screenshot below:
+
+![prisma-vercel](https://nextjstemplates.com/docs/prisma-vercel.png)

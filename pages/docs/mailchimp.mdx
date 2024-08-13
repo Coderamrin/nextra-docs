@@ -1,0 +1,34 @@
+---
+title: MailChimp Integration - Docs
+description: Steps by step instruction on how to integrate Mailchimp for collecting emails.
+serial: 11
+--- 
+
+# MailChimp Integration
+
+In this part of the documentation, we are going to show you how to integrate MailChimp into your starter template. 
+
+Follow the steps below to integrate MailChimp:
+
+1. Login to your MailChimp account if you don’t have an account yet go ahead and create one. 
+2.**Get the MailChimp Audience ID**: In the Mailchimp admin go to **Audience Dashboard>Mange Audience>Settings**
+
+Scroll down to the end of the settings page. You’ll find the Audience ID there.
+
+![mailchimp integration](https://nextjstemplates.com/docs/mailchimp-01.png)
+
+**Note:** If you don’t have an Audience, follow this [article](https://eepurl.com/dyilbz) to create one.
+
+
+2.**Get the API Key:** To Generate the API navigate to **[API Keys](https://us1.admin.mailchimp.com/account/api/)** and click on the **Create A Key** button. Follow the steps to generate your API key copy it and save it somewhere.
+
+
+3.**Get the Server region:**  To find this you need to be logged into your Mailchimp account, look at the URL in the browser and you’ll see something like `https://us21.admin.mailchimp.com/` the `us21` is the server prefix we want.
+
+Now update your env file with the following keys
+
+``` shellscript copy
+MAILCHIMP_API_KEY=YOUR_MAILCHIMP_API_KEY
+MAILCHIMP_AUDIENCE_ID=YOUR_AUDIENCE_ID
+MAILCHIMP_API_SERVER=MAILCHIMP_API_SERVER
+```

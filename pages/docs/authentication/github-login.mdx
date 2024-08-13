@@ -1,0 +1,46 @@
+---
+title: Github Login - Docs
+description: Step by step guide on how to integrate Google Authentication on your starter template.
+---
+
+# GitHub Login
+
+In this part of the documentation, we are going to show you how you can integrate GitHub Authentication on your Next.js Template. 
+
+To integrate Github Authentication you have to create a 0Auth app on GitHub. Then you have to get the Client ID and Secret. 
+
+Follow the steps below to create a 0Auth account on GitHub and then get the keys. 
+
+### Getting The Github Secret and Client ID
+
+To generate the Github Secret and Client ID first, you have to create a 0Auth Application on Github. 
+
+1. Go to your GitHub account then navigate to the [Developer Settings](https://github.com/settings/apps)
+
+![github-login](https://nextjstemplates.com/docs/github-login1.png)
+
+2. Click on the **0Auth App** button then click on the **Register a new application** button to register an Application.
+
+![github-login](https://nextjstemplates.com/docs/github-login2.png)
+
+3. Register an App by providing all the information. 
+    
+    Remember to change the **Authorization Callback URL** for the production. Just change the **http://localhost:3000** part of the URL with the URL of your website.
+    
+
+![github-login](https://nextjstemplates.com/docs/github-login3.png)
+
+4. Generate the Client's Secret: Click on the **Generate a new client secret** button to generate the Secret. 
+
+![github-login](https://nextjstemplates.com/docs/github-login4.png)
+
+5. Now Copy the Client ID and Client Secret from here. 
+
+![github-login](https://nextjstemplates.com/docs/github-login5.png)
+
+6. Now, add those keys to your .env file to the following variables
+
+```bash
+GITHUB_CLIENT_ID=PASTE_YOUR_CLIENT_ID_HERE
+GITHUB_CLIENT_SECRET=PASTE_YOUR_CLIENT_SECRET_HERE
+```

@@ -1,0 +1,46 @@
+{
+  "docs": {
+    "title": "Docs",
+    "type": "page"
+  },
+  "templates": {
+    "title": "Templates",
+    "type": "menu",
+    "items": {
+      "boilerplates": {
+        "title": "Boilerplates",
+        "href": "/boilerplate"
+      },
+      "dashboard": {
+        "title": "Dashboard",
+        "href": "/dashboard"
+      },
+      "landing-page": {
+        "title": "Landing Page",
+        "href": "/landing-page"
+      },
+      "blog": {
+        "title": "Blog",
+        "href": "/blog"
+      }
+    }
+  },
+  "resources": {
+    "title": "Resources",
+    "type": "menu",
+    "items": {
+      "support": {
+        "title": "Support",
+        "href": "/support"
+      },
+      "blog": {
+        "title": "Blog",
+        "href": "/blog"
+      },
+      "license": {
+        "title": "License",
+        "href": "/license"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+---
+title: Sanity Webhook Integration - Docs
+description: Sanity webhook integration for on-time data revalidation.
+---
+
+# Sanity Webhook Integration
+
+Sanity webhook is used for on-demand data revalidation.
+In this part of the documentation, we will show you how to integrate a **Sanity** webhook into your project.
+
+Follow the steps to integrate webhook:
+
+1. Create a webhook: Go to [sanity/manage](https://www.sanity.io/manage) and navigate to the API tab then click on the **Create Webhook** button
+
+![sanity](https://nextjstemplates.com/docs/sanity-18.png)
+
+2. Fill in the form with information about the hook you want to create:
+
+**Name:** Give your webhook a name.
+
+**Description:** Describe the function of your webhook (This is an optional field).
+
+**URL:** Set the URL to https://YOUR_SITE_URL/api/revalidate
+
+**Dataset:** Choose your desired dataset or leave the default value.
+
+**Trigger on:** Set the hook to trigger on **"Create"**, **"Update"**, and **"Delete"**.
+
+**Filter:** Leave this field blank.
+
+**Projections:** Set the projections to **`{_type, "slug":` `slug.current}`**
+
+**Status:** Check the enable webhook box.
+
+**HTTP Method:** POST.
+
+Leave HTTP headers, API version, and Draft as default.
+
+**Secret:** Give your webhook a unique secret and copy it.
+
+Hit save once completed to create your webhook.
+
+3. Save your webhook in the .env file under this variable name of your live site.
+
+Note: you can’t test webhook in the dev environment.
+
+```
+SANITY_HOOK_SECRET=YOUR_SECRET
+```
+
+4. Testing the webhook: If you deployed your site on Vercel then you can see the API call on the log if you choose the post method.

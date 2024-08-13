@@ -1,0 +1,17 @@
+{
+  "integration": {
+    "title": "Integration"
+  },
+  "create-an-author": {
+    "title": "Create an author"
+  },
+  "write-an-article": {
+    "title": "Write an article"
+  },
+  "api-integration": {
+    "title": "API Integration"
+  },
+  "webhook-integration": {
+    "title": "Webhook Integration"
+  }
+}

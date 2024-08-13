@@ -1,0 +1,52 @@
+---
+title: Algolia Integration - Docs
+description: Our templates comes with instant search using Algolia.
+serial: 11
+---
+
+import {Callout} from "nextra/components";
+
+# Algolia Integration
+
+In this part of the documentation, we are going to show you how to integrate Algolia into your boilerplate template.
+
+Follow the steps below to integrate Algolia:
+
+1. Login to your [Algolia](https://www.algolia.com/) dashboard, if you don’t have an account, go ahead and create one.
+2. **Create a project:** Go to the dashboard and click on **Application** then click on the **Create Application** button. Follow the steps to create the application.
+
+![algolia integration](https://nextjstemplates.com/docs/algolia-01.png)
+
+
+
+<Callout type="info">
+**Note:** It’ll create an unnamed application. Go to Settings>Applications to change the name. 
+</Callout>
+
+
+
+3. **Create Index:** Click on the **Get Started!** button.
+
+![algolia integration](https://nextjstemplates.com/docs/algolia-02.png)
+
+Once you click this you’ll be redirected to a page. 
+
+Enter your index name on that page and save the index. It’ll create an index for your Algolia project.
+
+4. **Generate API key:** From the **Overview** page go to **API Keys.**
+
+![algolia integration](https://nextjstemplates.com/docs/algolia-03.png)
+
+5. Go to **All API** Keys then click on the **New API Key** button. Now select the Index we created earlier. Select the permissions for the key as shown here:
+
+![algolia integration](https://nextjstemplates.com/docs/algolia-04.png)
+
+Now that we created the index and the API Key we have to get those keys and update the env file. 
+
+You can get the **Project ID** from the **Application** button, and the Index name is the name of the index you created earlier.
+
+```javascript copy
+NEXT_PUBLIC_ALGOLIA_PROJECT_ID=YOUR_PROJECT_ID
+NEXT_PUBLIC_ALGOLIA_API_KEY=THE_APIKEY_WE_CREATED
+NEXT_PUBLIC_ALGOLIA_INDEX=YOUR_INDEX_NAME
+```

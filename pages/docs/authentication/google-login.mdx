@@ -1,0 +1,73 @@
+---
+title: Github Login - Docs
+description: Step by step guide on how to integrate GitHub Authentication on your starter template.
+---
+
+# Google Login
+
+In this part of the documentation, we are going to show you how you can integrate Google Authentication into the Next.js Template.
+
+To integrate Google Authentication you have to create a project on Google Console. Then you have to get the Secret and Client Key.
+
+Follow these steps to create a project on Google Console, after that get the Secret and Client ID.
+
+### Getting The Google Secret and Client ID
+
+To get the Google Secret go to **[Google Console](https://console.developers.google.com/apis/credentials).** If you already have projects you’ll see **CREATE CREDENTIALS** button at the top, from there you can generate the Secret and Client ID.
+
+If you don’t have a project already then create one.
+
+1. Create a Project: Go to the Projects tab, you’ll see all the projects there.
+
+![google-login](https://nextjstemplates.com/docs/google-login1.png)
+
+2. After that click on the **New Project** button as shown below, then follow the steps to create a new project.
+
+3. Once you’ve created the project make sure to select it.
+
+![google-login](https://nextjstemplates.com/docs/google-login2.png)
+
+4. Now create the credentials by clicking on the **CREATE CREDENTIALS** and then the **0Auth client id.**
+
+![google-login](https://nextjstemplates.com/docs/google-login3.png)
+
+5. Once you click on the **0Auth client ID** you might see something like this. If you see this, go ahead and configure the consent screen.
+
+![google-login](https://nextjstemplates.com/docs/google-login4.png)
+
+6. Once it’s done click on the **0Auth client ID** once again and follow the steps to set it up
+
+![google-login](https://nextjstemplates.com/docs/google-login5.png)
+
+7. You’ll be asked to provide the **Authorized JavaScript Origin.** Click on the **ADD URI** button to add it.
+
+Since we are setting up a local environment, we are going to add our [localhost](http://localhost) URI there.
+
+![google-login](https://nextjstemplates.com/docs/google-login6.png)
+
+8. After that, you have to provide the **Authorized redirects URI.** For the **Authorized redirects URI** you have to include your domain with the callback path included in the end.
+
+For production: `https://{YOUR_DOMAIN}/api/auth/callback/google`
+
+For development: `http://localhost:3000/api/auth/callback/google`
+
+![google-login](https://nextjstemplates.com/docs/google-login7.png)
+
+9. Once the setup is done click on the **Create** button, if everything is done perfectly you’ll be redirected to this page.
+
+Here you can see the **Client ID** and **Client Secret** go ahead and copy-paste them to the .env file
+
+![google-login](https://nextjstemplates.com/docs/google-login8.png)
+
+The .env variables will look like this:
+
+```bash
+GOOGLE_CLIENT_ID=YOUR_GOOGLE_CLIENT
+GOOGLE_CLIENT_SECRET=YOUR_GOOGLE_SECRET
+```
+
+If you’ve accidentally closed the tab, click on this button to open it again.
+
+![google-login](https://nextjstemplates.com/docs/google-login9.png)
+
+---

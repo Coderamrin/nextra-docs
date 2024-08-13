@@ -1,0 +1,8 @@
+{
+  "postgresql": {
+    "title": "PostgreSQL"
+  },
+  "migrate-the-schema": {
+    "title": "Migrate the Schema"
+  }
+}

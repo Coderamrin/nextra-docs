@@ -1,0 +1,11 @@
+{
+  "getting-secrets": {
+    "title": "Get Secret Key"
+  },
+  "create-products": {
+    "title": "Create Product"
+  }, 
+  "getting-product-data": {
+    "title": "Get Product Data"
+  }
+}
